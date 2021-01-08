@@ -21,6 +21,6 @@ jobs:
       run: git fetch --prune --unshallow --tags
     
 
-    - if: github.event.client_payload.echo_string
-      name: echo string
+    #- if: github.event.client_payload.echo_string
+    - name: echo string
       run: echo ${{ toJSON(github.event.client_payload.echo_string) }}
